@@ -4,8 +4,6 @@
 - **Build:** [Hugo](https://gohugo.io/) turns it into static HTML. No JavaScript, no database.
 - **Hosting:** a small Caddy container (`Dockerfile`, `compose.yml`), or GitHub Pages (`.github/workflows/pages.yml`).
 
-Live preview: <https://maureen.cowolff-shenanigans.com> (not indexed by search engines while `noindex = true` in `hugo.toml`).
-
 ## Editing content
 
 ```
