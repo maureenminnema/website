@@ -1,8 +1,5 @@
 # Maureen Minnema – website
 
-Personal academic website, modelled on the structure of [emma-peters.com](https://www.emma-peters.com/):
-a home page with a large statement, and one page per section (Research, Media, Events, Publications, About).
-
 - **Content** is plain Markdown in `content/`. Add a file and it appears on the site.
 - **Build:** [Hugo](https://gohugo.io/) turns it into static HTML. No JavaScript, no database.
 - **Hosting:** a small Caddy container (`Dockerfile`, `compose.yml`), or GitHub Pages (`.github/workflows/pages.yml`).
