@@ -11,12 +11,14 @@ description: About Maureen Minnema, cognitive neuroscience and interdisciplinary
 facts:
   - label: Based in
     value: Nijmegen, the Netherlands
+  - label: Current role
+    value: Research Assistant
   - label: Affiliation
-    value: Donders Institute for Brain, Cognition and Behaviour
-  - label: Studied at
-    value: Universität Osnabrück
+    value: Sleep & Memory lab (Dr. Martin Dresler), Donders Institute for Brain, Cognition and Behaviour
   - label: Interests
     value: Cognitive neuroscience, philosophy, AI, neuropsychology
+  - label: Languages
+    value: Fluent in English, Dutch, German
   - label: Pronouns
     value: she/her
 
