@@ -1,0 +1,31 @@
+{{- /* Dated rows: month and year, then title, subtitle (outlet, venue), text and link. */ -}}
+<ol class="rows">
+{{- $dateFormat := cond (.grouped | default false) "January" "January 2006" }}
+{{- range .pages }}
+  {{- $page := . }}
+  {{- $img := "" }}
+  {{- with .Params.image }}{{ $img = partial "image-resource.html" (dict "src" . "page" $page "required" true) }}{{ end }}
+  <li class="row" id="{{ .File.ContentBaseName }}">
+    <p class="row-date">{{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format $dateFormat }}</time>{{ end }}</p>
+    <div class="row-body">
+      <h3 class="entry-title">
+        {{- with .Params.link }}<a href="{{ partial "url.html" . }}">{{ $page.Title }}</a>{{ else }}{{ .Title }}{{ end -}}
+      </h3>
+      {{- with .Params.subtitle }}
+      <p class="entry-meta">{{ . }}</p>
+      {{- end }}
+      {{- with .Content }}
+      <div class="prose">{{ . }}</div>
+      {{- end }}
+      {{- with $img }}
+      <figure class="row-media">
+        {{ partial "picture.html" (dict "res" . "alt" ($page.Params.imageAlt | default "") "widths" (slice 480 960) "sizes" "(min-width: 760px) 640px, 100vw") }}
+      </figure>
+      {{- end }}
+      {{- with .Params.link }}
+      <p><a class="arrow-link" href="{{ partial "url.html" . }}">{{ $page.Params.linkLabel | default "Read more" }}</a></p>
+      {{- end }}
+    </div>
+  </li>
+{{- end }}
+</ol>

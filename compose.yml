@@ -1,0 +1,46 @@
+# Local preview of the site. (The public deployment on cowolff-shenanigans.com has its own compose
+# file in ~/docker/maureen/; don't use this one for that.)
+#
+#   docker compose up -d --build              the real thing (Caddy) at http://localhost:8080
+#   docker compose --profile dev up maureen-dev
+#                                             live preview at http://localhost:1313 that reloads
+#                                             whenever a Markdown file changes
+name: maureen-website
+
+services:
+  maureen-site:
+    build: .
+    image: maureen-site
+    restart: unless-stopped
+    environment:
+      SITE_ADDRESS: ":80"
+    ports:
+      - "127.0.0.1:${HTTP_PORT:-8080}:80"
+    user: "65534:65534"
+    read_only: true
+    tmpfs:
+      - /data:uid=65534,gid=65534,mode=0700
+      - /config:uid=65534,gid=65534,mode=0700
+    cap_drop: [ALL]
+    cap_add: [NET_BIND_SERVICE]
+    security_opt: ["no-new-privileges:true"]
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1:2020/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  maureen-dev:
+    profiles: [dev]
+    image: ghcr.io/gohugoio/hugo:v0.167.0
+    # The image runs as uid 1000; on a host where your uid differs, set HUGO_UID/HUGO_GID.
+    user: "${HUGO_UID:-1000}:${HUGO_GID:-1000}"
+    command: server --bind 0.0.0.0 --port 1313 --baseURL http://localhost:1313/ --buildDrafts --renderToMemory --noBuildLock --cacheDir /tmp/hugo-cache
+    environment:
+      HUGO_RESOURCEDIR: /tmp/hugo-resources
+    volumes:
+      # :z lets the container read the folder on SELinux hosts (Fedora); elsewhere it is ignored.
+      - .:/project:ro,z
+    ports:
+      - "127.0.0.1:1313:1313"

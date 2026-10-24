@@ -1,0 +1,30 @@
+{{- /* References grouped by front matter "status", in the order of the section's "groups".
+Entries without a status count as the first group. The citation is the Markdown body. */ -}}
+{{- $groups := .Params.groups | default (slice "Published" "Preprints" "Submitted" "In preparation") }}
+{{- $first := lower (index $groups 0) }}
+{{- range $groups }}
+  {{- $name := . }}
+  {{- $g := lower . }}
+  {{- $items := slice }}
+  {{- range $.Pages }}
+    {{- if eq (lower (.Params.status | default $first)) $g }}{{ $items = $items | append . }}{{ end }}
+  {{- end }}
+  {{- with $items }}
+<section class="citation-group" aria-labelledby="g-{{ $g | urlize }}">
+  <h2 class="section-label" id="g-{{ $g | urlize }}">{{ $name }}</h2>
+  <ol class="citations">
+    {{- range . }}
+    {{- $page := . }}
+    <li class="citation" id="{{ .File.ContentBaseName }}">
+      <div class="prose">{{ .Content }}</div>
+      {{- with .Params.doi }}
+      <a class="doi" href="https://doi.org/{{ . }}">https://doi.org/{{ . }}</a>
+      {{- else }}{{ with .Params.link }}
+      <a class="doi" href="{{ partial "url.html" . }}">{{ $page.Params.linkLabel | default . }}</a>
+      {{- end }}{{ end }}
+    </li>
+    {{- end }}
+  </ol>
+</section>
+  {{- end }}
+{{- end }}

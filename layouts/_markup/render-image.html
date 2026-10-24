@@ -1,0 +1,8 @@
+{{- /* Markdown images: ![alt](photo.jpg) next to the Markdown file, or ![alt](images/photo.jpg) from assets/.
+Found images are resized; anything else is linked as written. */ -}}
+{{- $res := partial "image-resource.html" (dict "src" .Destination "page" .Page) -}}
+{{- if $res -}}
+  {{- partial "picture.html" (dict "res" $res "alt" .PlainText "widths" (slice 640 1280) "sizes" "(min-width: 760px) 720px, 100vw" "class" "prose-img") -}}
+{{- else -}}
+<img src="{{ partial "url.html" .Destination }}" alt="{{ .PlainText }}" loading="lazy">
+{{- end -}}

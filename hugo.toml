@@ -1,0 +1,41 @@
+# Technical settings only. Texts, links and the portrait live in content/ (see README.md).
+
+# Where the site is served. Docker and the GitHub Pages workflow override it with --baseURL,
+# so the same files work at the root of a domain and under a path like user.github.io/repo/.
+baseURL = 'https://maureen.cowolff-shenanigans.com/'
+locale = 'en'
+title = 'Maureen Minnema'
+
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term', 'rss']
+
+[params]
+  # While the site is a preview, ask search engines not to index it.
+  # Set to false once it is Maureen's real home page.
+  noindex = true
+
+# Raw HTML in Markdown is dropped, so content can never add scripts. That is what lets the
+# Content-Security-Policy forbid scripts entirely (see Caddyfile and _partials/head.html).
+[markup.goldmark.renderer]
+  unsafe = false
+
+[markup.goldmark.parser.attribute]
+  block = true
+
+# Entries inside a section (content/media/some-interview.md) are shown on the section's page
+# and get no page of their own. Pages directly in content/ (content/imprint.md) still do.
+[[cascade]]
+  [cascade.build]
+    render = 'never'
+    list = 'always'
+    publishResources = false
+  [cascade.target]
+    kind = 'page'
+    path = '/*/**'
+
+[imaging]
+  resampleFilter = 'Lanczos'
+  [imaging.jpeg]
+    quality = 85
+  [imaging.webp]
+    quality = 82

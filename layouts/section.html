@@ -1,0 +1,60 @@
+{{ define "main" }}
+{{- /* One template for every folder in content/. Its _index.md picks the look with "display":
+  cards      full entries with optional image (research, projects)
+  list       compact dated list (media, events, talks)
+  citations  references grouped by "status" (publications)
+  profile    portrait, bio and facts, no entries (about) */}}
+{{- $display := .Params.display | default "cards" }}
+
+{{- if eq $display "profile" }}
+<section class="profile">
+  <div class="profile-visual">
+    {{ partial "portrait.html" (dict "src" (.Params.portrait | default site.Home.Params.portrait) "alt" (.Params.portraitAlt | default site.Home.Params.portraitAlt) "eager" true) }}
+  </div>
+  <div class="profile-text">
+    <h1 class="page-title">{{ .Params.heading | default .Title }}</h1>
+    <div class="prose">{{ .Content }}</div>
+    {{- with .Params.facts }}
+    <dl class="facts">
+      {{- range . }}
+      <div><dt>{{ .label }}</dt><dd>{{ .value | markdownify }}</dd></div>
+      {{- end }}
+    </dl>
+    {{- end }}
+    {{- $links := site.Home.Params.links }}
+    {{- if or $links .Params.cv }}
+    <h2 class="section-label">{{ .Params.contactTitle | default "Reach me" }}</h2>
+    <p class="actions">
+      {{- range $links }}
+      <a class="button button-ghost" href="{{ partial "url.html" .url }}" rel="me">{{ .label }}</a>
+      {{- end }}
+      {{- with .Params.cv }}
+      <a class="button" href="{{ partial "url.html" . }}">Download CV</a>
+      {{- end }}
+    </p>
+    {{- end }}
+  </div>
+</section>
+
+{{- else }}
+<header class="page-head">
+  <h1 class="page-title">{{ .Params.heading | default .Title }}</h1>
+  {{- with .Content }}
+  <div class="prose lead">{{ . }}</div>
+  {{- end }}
+</header>
+
+{{- if eq $display "citations" }}
+  {{- partial "entries/citations.html" . }}
+{{- else if .Params.groupByYear }}
+  {{- range .Pages.GroupByDate "2006" }}
+<section class="year-group" aria-labelledby="y-{{ .Key }}">
+  <h2 class="year" id="y-{{ .Key }}">{{ .Key }}</h2>
+  {{ partial (printf "entries/%s.html" $display) (dict "pages" .Pages "grouped" true) }}
+</section>
+  {{- end }}
+{{- else }}
+  {{ partial (printf "entries/%s.html" $display) (dict "pages" .Pages) }}
+{{- end }}
+{{- end }}
+{{ end }}

@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="footer-name">{{ site.Title }}</p>
+    {{- with site.Home.Params.links }}
+    <ul class="footer-links">
+      {{- range . }}
+      <li><a href="{{ partial "url.html" .url }}" rel="me">{{ .label }}</a></li>
+      {{- end }}
+    </ul>
+    {{- end }}
+    <p class="footer-meta">© {{ now.Year }} {{ site.Title }}</p>
+  </div>
+</footer>

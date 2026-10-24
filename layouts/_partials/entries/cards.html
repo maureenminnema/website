@@ -1,0 +1,25 @@
+{{- /* Full entries, one after another, with an optional image (front matter "image"). */ -}}
+<div class="cards">
+{{- range .pages }}
+  {{- $page := . }}
+  {{- $img := "" }}
+  {{- with .Params.image }}{{ $img = partial "image-resource.html" (dict "src" . "page" $page "required" true) }}{{ end }}
+  <article class="card{{ if $img }} card-with-media{{ end }}" id="{{ .File.ContentBaseName }}">
+    {{- with $img }}
+    <figure class="card-media">
+      {{ partial "picture.html" (dict "res" . "alt" ($page.Params.imageAlt | default "") "widths" (slice 480 960) "sizes" "(min-width: 900px) 40vw, 100vw") }}
+    </figure>
+    {{- end }}
+    <div class="card-body">
+      {{- with .Params.subtitle }}
+      <p class="entry-meta">{{ . }}</p>
+      {{- end }}
+      <h2 class="entry-title">{{ .Title }}</h2>
+      <div class="prose">{{ .Content }}</div>
+      {{- with .Params.link }}
+      <p><a class="arrow-link" href="{{ partial "url.html" . }}">{{ $page.Params.linkLabel | default "Read more" }}</a></p>
+      {{- end }}
+    </div>
+  </article>
+{{- end }}
+</div>

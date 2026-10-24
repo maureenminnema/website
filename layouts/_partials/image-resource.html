@@ -1,0 +1,13 @@
+{{- /* Finds an image named in front matter or Markdown: first next to the page (page bundle),
+then in assets/. Returns nothing when there is no such file; with "required" that is a build
+error, so a misspelt file name is noticed instead of the picture quietly missing. */ -}}
+{{- $src := strings.TrimPrefix "/" .src -}}
+{{- $res := "" -}}
+{{- with .page }}{{ $res = .Resources.Get $src }}{{ end -}}
+{{- if not $res }}{{ $res = resources.Get $src }}{{ end -}}
+{{- if and (not $res) .required -}}
+  {{- $where := "assets/" -}}
+  {{- with .page }}{{ with .File }}{{ $where = printf "%s and assets/" .Dir }}{{ end }}{{ end -}}
+  {{- warnf "image %q not found (looked in %s)" .src $where -}}
+{{- end -}}
+{{- return $res -}}

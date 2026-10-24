@@ -1,0 +1,60 @@
+{{ define "main" }}
+{{- $p := .Params }}
+<section class="hero">
+  <div class="hero-visual">
+    {{ partial "portrait.html" (dict "src" $p.portrait "alt" ($p.portraitAlt | default (printf "Portrait of %s" site.Title)) "eager" true) }}
+  </div>
+  <div class="hero-text">
+    {{- with $p.eyebrow }}
+    <p class="eyebrow">{{ . }}</p>
+    {{- end }}
+    <h1 class="hero-title">{{ $p.headline | default site.Title }}</h1>
+    {{- with .Content }}
+    <div class="prose hero-intro">{{ . }}</div>
+    {{- end }}
+    {{- with $p.buttons }}
+    <p class="actions">
+      {{- range . }}
+      <a class="button{{ if eq .style "ghost" }} button-ghost{{ end }}" href="{{ partial "url.html" .url }}">{{ .label }}</a>
+      {{- end }}
+    </p>
+    {{- end }}
+  </div>
+</section>
+
+{{- with $p.focus }}
+<section class="block" aria-labelledby="focus-title">
+  <h2 id="focus-title" class="section-label">{{ $p.focusTitle | default "Focus" }}</h2>
+  <ul class="focus-grid">
+    {{- range . }}
+    <li class="focus-item">
+      <h3>{{ .title }}</h3>
+      <p>{{ .text | markdownify }}</p>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+
+{{- /* The newest entries from the dated sections, so the home page follows new Markdown files. */}}
+{{- $from := $p.latestFrom | default (slice "media" "events" "publications") }}
+{{- $latest := first ($p.latestCount | default 3) (where site.RegularPages "Section" "in" $from).ByDate.Reverse }}
+{{- with $latest }}
+<section class="block" aria-labelledby="latest-title">
+  <h2 id="latest-title" class="section-label">{{ $p.latestTitle | default "Latest" }}</h2>
+  <ul class="latest-grid">
+    {{- range . }}
+    <li>
+      <a class="latest-item" href="{{ .Parent.RelPermalink }}#{{ .File.ContentBaseName }}">
+        <span class="latest-meta">{{ .Parent.LinkTitle }} · <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format "January 2006" }}</time></span>
+        <span class="latest-title">{{ .Title }}</span>
+        {{- with .Params.subtitle }}
+        <span class="latest-sub">{{ . }}</span>
+        {{- end }}
+      </a>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+{{ end }}

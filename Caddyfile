@@ -1,0 +1,64 @@
+# Static hosting for Maureen Minnema's website (Hugo output in /srv).
+#
+# SITE_ADDRESS decides how the site is served:
+#   maureen.example.org   HTTPS with an automatic Let's Encrypt certificate (standalone hosting)
+#   :80                   plain HTTP (local preview, or behind another reverse proxy)
+{
+	# The config never changes at runtime, so nothing inside the container gets to reconfigure the server.
+	admin off
+}
+
+(site) {
+	root * /srv
+	encode zstd gzip
+	# HTML, CSS and SVG are gzipped at build time (see Dockerfile), so busy moments cost no CPU.
+	file_server {
+		precompressed gzip
+	}
+
+	header {
+		# No scripts at all, and Markdown cannot add any (Hugo drops raw HTML). Keep it that way: on a
+		# subdomain of a shared domain, a script could act on the sites next door.
+		Content-Security-Policy "default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+		Strict-Transport-Security "max-age=31536000"
+		Cross-Origin-Opener-Policy "same-origin"
+		Cross-Origin-Resource-Policy "same-origin"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		X-Frame-Options "DENY"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		-Server
+	}
+
+	# Hugo puts a content hash in the names of the stylesheet (main.min.<sha256>.css) and of resized
+	# images (photo_hu_<hash>.webp), so those files never change; fonts get a new name if they do.
+	# Pages keep their URLs between releases and are revalidated on every visit (cheap 304s).
+	@immutable path_regexp \.[0-9a-f]{64}\.css$|_hu_[0-9a-f]{16}\.[a-z]+$|^/fonts/
+	header @immutable Cache-Control "public, max-age=31536000, immutable"
+	@mutable not path_regexp \.[0-9a-f]{64}\.css$|_hu_[0-9a-f]{16}\.[a-z]+$|^/fonts/
+	header @mutable Cache-Control "no-cache"
+
+	handle_errors {
+		header -Server
+		@notfound expression {err.status_code} == 404
+		handle @notfound {
+			root * /srv
+			rewrite * /404.html
+			file_server {
+				precompressed gzip
+			}
+		}
+		handle {
+			respond "{err.status_code} {err.status_text}"
+		}
+	}
+}
+
+{$SITE_ADDRESS::80} {
+	import site
+}
+
+# Internal endpoint for the container health check; not published.
+http://:2020 {
+	import site
+}

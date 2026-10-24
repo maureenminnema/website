@@ -1,0 +1,11 @@
+{{- /* The tall picture next to the headline (home) or the bio (about).
+Without a portrait file it falls back to the network illustration. */ -}}
+{{- $res := "" -}}
+{{- with .src }}{{ $res = partial "image-resource.html" (dict "src" . "required" true) }}{{ end -}}
+<figure class="portrait">
+  {{- with $res }}
+  {{ partial "picture.html" (dict "res" . "alt" $.alt "widths" (slice 480 800 1200) "sizes" "(min-width: 900px) 42vw, 100vw" "eager" $.eager) }}
+  {{- else }}
+  {{ partial "motif.html" . }}
+  {{- end }}
+</figure>

@@ -1,0 +1,7 @@
+{{- /* Resolves a URL written in front matter. "about/" or "/files/cv.pdf" become paths on this
+site (with the GitHub Pages repo prefix when there is one); anything with a scheme stays as is. */ -}}
+{{- $u := urls.Parse . -}}
+{{- if or $u.IsAbs (hasPrefix . "#") (hasPrefix . "//") -}}
+  {{- return . -}}
+{{- end -}}
+{{- return (strings.TrimPrefix "/" . | relURL) -}}

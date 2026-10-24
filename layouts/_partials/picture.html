@@ -1,0 +1,18 @@
+{{- /* Responsive <img> for an image resource.
+  res: the image   alt: alt text   sizes: the sizes attribute   widths: widths to generate
+  class: optional class   eager: true for images visible right away (no lazy loading) */ -}}
+{{- $res := .res -}}
+{{- $lazy := cond (.eager | default false) "" ` loading="lazy" decoding="async"` -}}
+{{- if eq $res.MediaType.SubType "svg" -}}
+<img src="{{ $res.RelPermalink }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }}{{ $lazy | safeHTMLAttr }}>
+{{- else -}}
+  {{- /* Phone photos are often stored sideways with an EXIF rotation tag. */ -}}
+  {{- if eq $res.MediaType.SubType "jpeg" }}{{ $res = $res.Filter images.AutoOrient }}{{ end -}}
+  {{- $set := slice -}}
+  {{- range (.widths | default (slice 480 960 1440)) -}}
+    {{- if le . $res.Width }}{{ $set = $set | append ($res.Resize (printf "%dx webp" .)) }}{{ end -}}
+  {{- end -}}
+  {{- if not $set }}{{ $set = slice ($res.Resize (printf "%dx webp" $res.Width)) }}{{ end -}}
+  {{- $img := index $set (sub (len $set) 1) -}}
+<img src="{{ $img.RelPermalink }}" srcset="{{ range $i, $r := $set }}{{ if $i }}, {{ end }}{{ $r.RelPermalink }} {{ $r.Width }}w{{ end }}" sizes="{{ .sizes | default "100vw" }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }}{{ $lazy | safeHTMLAttr }}>
+{{- end -}}

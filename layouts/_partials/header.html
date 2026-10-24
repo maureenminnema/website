@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        {{- /* Every folder in content/ with an _index.md becomes a menu item, ordered by its weight. */}}
+        {{- range site.Home.Sections.ByWeight }}
+          {{- if not .Params.hideFromMenu }}
+        <li><a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a></li>
+          {{- end }}
+        {{- end }}
+      </ul>
+    </nav>
+  </div>
+</header>
