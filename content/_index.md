@@ -2,13 +2,13 @@
 title: Maureen Minnema
 
 # The big statement at the top of the home page.
-eyebrow: Sleep and dreams · Cognitive neuroscience · Interdisciplinary research
-headline: Maureen Minnema (MSc)
+eyebrow: Sleep and dreams · Cognitive neuroscience · Interdisciplinary research · Ethics of neurotechnology
+headline: Exploring cognition and the brain
 
 # Portrait next to the headline (and on the About page). Put the photo in assets/images/ and
 # write its name here, e.g.  portrait: images/portrait.jpg
 # Left empty, the page shows the network illustration instead.
-portrait: images/portrait.jpg
+portrait: images/portrait2.jpg
 portraitAlt: Portrait of Maureen Minnema
 
 buttons:
