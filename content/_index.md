@@ -9,7 +9,7 @@ headline: Exploring cognition and the brain from a broader view
 # Portrait next to the headline (and on the About page). Put the photo in assets/images/ and
 # write its name here, e.g.  portrait: images/portrait.jpg
 # Left empty, the page shows the network illustration instead.
-portrait: ""
+portrait: images/portrait.jpg
 portraitAlt: Portrait of Maureen Minnema
 
 buttons:
