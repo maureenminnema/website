@@ -20,6 +20,8 @@ buttons:
   - label: GitHub
     url: https://github.com/maureenminnema
     style: ghost
+  - label: Participate in our studies
+    url: www.neuro.diy
 
 focusTitle: Focus
 focus:
