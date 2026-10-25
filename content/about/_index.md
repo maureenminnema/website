@@ -5,7 +5,7 @@ weight: 90
 display: profile
 description: About Maureen Minnema, cognitive neuroscience and interdisciplinary research in Nijmegen.
 
-Uses the home page portrait unless one is set here.
+# Uses the home page portrait unless one is set here.
 portrait: images/portrait.jpg
 
 facts:
