@@ -1,5 +1,5 @@
 ---
-title: '[EVENT] "World Alzheimer's Day: sleep, memory and dementia"'
+title: '[EVENT "World Alzheimer's Day: sleep, memory and dementia"'
 date: 2026-09-19
 subtitle: Stevenskerk, Nijmegen
 link: null
