@@ -32,16 +32,16 @@ facts:
     - Experimental design: Basic experience with PsychoPy and Unity
     - Digital and creative tools: MS Office; Canva; Video-editing software; Markdown; basic experience with HTML and Adobe Photoshop
 
+   - label: Academic background
+    value: |
+      - **MSc in Cognitive science (Major I: neuroscience; Major II: philosophy)** (_graduated Oct. 2025_, GPA: 1.2, **excellent**), Univeristy Osnabrück, Germany
+      - Included courses in neuroimaging & neurostimulation at Center for Mind and Brain Sciences (CIMeC), Univeristy of Trento, Italy
+      - Included courses in philosophy of neuroscience at Vrije Universeit Amsterdam, Netherlands
+      - **BSc in Natural & social sciences (Major: brain & cognition)** (_graduated June 2021_, GPA: 7.5/10, **good**), University of Amsterdam, Netherlands
+      - **Pre-university education (Profile: nature & technics, nature & health)** (_graduated June 2017__), Marne College Bolsward, Netherlands
+      - Including extracurricular education in German and European orientation
+
 # A CV to download: put the PDF in static/files/ and name it here.
 # cv: files/cv-maureen-minnema.pdf
 ---
 
-As a master's student, I immerse myself in questions about cognition and the brain. With an
-interdisciplinary background and a special interest in philosophy, AI and neuropsychology, I look at
-neuroscientific research from a broader view, and I hope to make meaningful contributions to the
-scientific debate.
-
-I work as a research assistant in the Sleep & Memory Lab of the Donders Institute for Brain,
-Cognition and Behaviour in Nijmegen. I also enjoy taking research beyond the lab: from showing
-NPO Radio 1 around our sleep lab to presenting work on sleep, memory and dementia at a public
-World Alzheimer's Day event.
