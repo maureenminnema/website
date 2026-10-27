@@ -24,7 +24,7 @@ facts:
   - label: Soft skills
     value: Project and study management; Organizational leadership; Interdisciplinary teamwork; Intercultural communication; Public speaking and outreach; Event planning; Student supervision; Teaching; Social media content creation & visual design
   - label: Technical skills
-    value: |
+    value:
       **Data acquisition:** MEG; full-scalp EEG; wearable EEG; ECG; smartwatch-based monitoring; eye tracking and pupillometry; behavioral data collection
 
       **Research software and programming:**
@@ -33,7 +33,7 @@ facts:
     - Digital and creative tools: MS Office; Canva; Video-editing software; Markdown; basic experience with HTML and Adobe Photoshop
 
     - label: Academic background
-    value: |
+    value:
       - **MSc in Cognitive science (Major I: neuroscience; Major II: philosophy)** (_graduated Oct. 2025_, GPA: 1.2, **excellent**), Univeristy Osnabrück, Germany
       - Included courses in neuroimaging & neurostimulation at Center for Mind and Brain Sciences (CIMeC), Univeristy of Trento, Italy
       - Included courses in philosophy of neuroscience at Vrije Universeit Amsterdam, Netherlands
