@@ -1,9 +1,8 @@
 ---
-title: Media
+title: Outreach
 weight: 20
 display: list
 groupByYear: true
-description: Radio, press and other science communication with Maureen Minnema.
 ---
 
-Sharing research on sleep, memory and the brain with a wider audience.
+Sharing research on sleep, memory and the brain with a wider audience. Here you find my appearances on the radio, in interviews or events and other forms of science communication.
