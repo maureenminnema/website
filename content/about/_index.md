@@ -30,17 +30,17 @@ facts:
     value: Project and study management; Organizational leadership; Interdisciplinary teamwork; Intercultural communication; Public speaking and outreach; Event planning; Student supervision; Teaching; Social media content creation & visual design, Leading youth workshops
 
   - label: Soft skills
-  value: |
-    <span title="Coordinating research activities, organising study procedures, and keeping projects running smoothly.">Project and study management</span>;
-    <span title="Taking initiative, coordinating people and activities, and helping teams work towards shared goals.">Organizational leadership</span>;
-    <span title="Bringing together perspectives from neuroscience, psychology, philosophy, and other disciplines.">Interdisciplinary teamwork</span>;
-    <span title="Communicating effectively across languages, cultures, and academic backgrounds.">Intercultural communication</span>;
-    <span title="Presenting scientific research to diverse audiences, including public events and media.">Public speaking and outreach</span>;
-    <span title="Organising events, coordinating practical details, and supporting successful event delivery.">Event planning</span>;
-    <span title="Supporting students with research activities, learning goals, and practical guidance.">Student supervision</span>;
-    <span title="Explaining concepts clearly and helping others develop their knowledge and skills.">Teaching</span>;
-    <span title="Creating accessible science communication content and visual materials for digital platforms.">Social media content creation & visual design</span>;
-    <span title="Planning and facilitating workshops for young people, encouraging engagement and active participation.">Leading youth workshops</span>
+    value: |
+      <span title="Coordinating research activities, organising study procedures, and keeping projects running smoothly.">Project and study management</span>;
+      <span title="Taking initiative, coordinating people and activities, and helping teams work towards shared goals.">Organizational leadership</span>;
+      <span title="Bringing together perspectives from neuroscience, psychology, philosophy, and other disciplines.">Interdisciplinary teamwork</span>;
+      <span title="Communicating effectively across languages, cultures, and academic backgrounds.">Intercultural communication</span>;
+      <span title="Presenting scientific research to diverse audiences, including public events and media.">Public speaking and outreach</span>;
+      <span title="Organising events, coordinating practical details, and supporting successful event delivery.">Event planning</span>;
+      <span title="Supporting students with research activities, learning goals, and practical guidance.">Student supervision</span>;
+      <span title="Explaining concepts clearly and helping others develop their knowledge and skills.">Teaching</span>;
+      <span title="Creating accessible science communication content and visual materials for digital platforms.">Social media content creation & visual design</span>;
+      <span title="Planning and facilitating workshops for young people, encouraging engagement and active participation.">Leading youth workshops</span>
 
   - label: Technical skills
     value: |
