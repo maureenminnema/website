@@ -32,7 +32,7 @@ facts:
     - Experimental design: Basic experience with PsychoPy and Unity
     - Digital and creative tools: MS Office; Canva; Video-editing software; Markdown; basic experience with HTML and Adobe Photoshop
 
-   - label: Academic background
+    - label: Academic background
     value: |
       - **MSc in Cognitive science (Major I: neuroscience; Major II: philosophy)** (_graduated Oct. 2025_, GPA: 1.2, **excellent**), Univeristy Osnabrück, Germany
       - Included courses in neuroimaging & neurostimulation at Center for Mind and Brain Sciences (CIMeC), Univeristy of Trento, Italy
