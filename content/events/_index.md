@@ -1,9 +1,8 @@
 ---
-title: Events
+title: Teaching
 weight: 30
 display: list
 groupByYear: true
-description: Talks, public events and outreach with Maureen Minnema.
 ---
 
-Talks, public events and outreach.
+An overview of recent teaching activities.
