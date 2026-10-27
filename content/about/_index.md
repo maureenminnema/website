@@ -27,26 +27,20 @@ facts:
     value: Neural mechanisms of memory; Neuroimaging techniques; Sleep & dreams; Ethics of neurotechnology; Philosophy of consciousness; Science communication
 
   - label: Soft skills
-    value: Project and study management; Organizational leadership; Interdisciplinary teamwork; Intercultural communication; Public speaking and outreach; Event planning; Student supervision; Teaching; Social media content creation & visual design
+    value: Project and study management; Organizational leadership; Interdisciplinary teamwork; Intercultural communication; Public speaking and outreach; Event planning; Student supervision; Teaching; Social media content creation & visual design, Leading youth workshops
 
   - label: Technical skills
     value: |
       **Data acquisition:** MEG; full-scalp EEG; wearable EEG; ECG; smartwatch-based monitoring; eye tracking and pupillometry; behavioral data collection
-
-      **Research software and programming:**
-      - Data analysis: Python (including MNE-Python); SPSS; basic experience with MATLAB, RStudio, and JASP
-      - Experimental design: Basic experience with PsychoPy and Unity
-      - Digital and creative tools: MS Office; Canva; video-editing software; Markdown; basic experience with HTML and Adobe Photoshop
-
-  - label: Academic background
-    value: |
-      - **MSc in Cognitive Science (Major I: Neuroscience; Major II: Philosophy)** (_graduated October 2025_, GPA: 1.2, **excellent**), University of Osnabrück, Germany
-      - Included courses in neuroimaging and neurostimulation at the Center for Mind and Brain Sciences (CIMeC), University of Trento, Italy
-      - Included courses in philosophy of neuroscience at Vrije Universiteit Amsterdam, the Netherlands
-      - **BSc in Natural and Social Sciences (Major: Brain & Cognition)** (_graduated June 2021_, GPA: 7.5/10, **good**), University of Amsterdam, the Netherlands
-      - **Pre-university education (Profiles: Nature & Technology, Nature & Health)** (_graduated June 2017_), Marne College, Bolsward, the Netherlands
-      - Extracurricular education in German and European orientation
+      **Data analysis:** Python (including MNE-Python); SPSS; basic experience with MATLAB, RStudio, and JASP
+      **Experimental design:** Basic experience with PsychoPy and Unity
+      **Digital and creative tools:** MS Office; Canva; video-editing software; Markdown; basic experience with HTML and Adobe Photoshop
 
 # A CV to download: put the PDF in static/files/ and name it here.
 # cv: files/cv-maureen-minnema.pdf
 ---
+
+**Curent role:** test
+
+**Academic background:** 
+I graduated with a Master's degree in Cognitive Science from the University of Osnabrück, Germany, in October 2025, majoring in boht neururoscience and philosophy (GPA: 1.2, _excellent_). During my studies, I also took courses in neuroimaging and neurostimulation at the Center for Mind and Brain Sciences (CIMeC) at the University of Trento, Italy, and in the philosophy of neuroscience at Vrije Universiteit Amsterdam, the Netherlands. My master's thesis investigated the neural correlates of sequential episodic memory. The project involved MEG data collection and processing, including time-frequency analysis and cluster-based permutation testing. During my studies, I published an infographic on dream hacking to a cognitive science student journal. Previously, I completed a Bachelor's degree in Natural & Social Sciences, majoring in the brain & cognition track of psychology, at the University of Amsterdam in 2021 (GPA: 7.5 in the Dutch grading system, _good_). My bachelor thesis concerned a behavioral data collection on grapheme learning with synesthetic letter-color associations, and statistical testing. I also completed an interdisciplinary group research project on creativity, which focused on developing skills in interdisciplinary research and integrating different fields into coherent research frameworks. Before university, I completed pre-university education with additional extracurricular coursework in German and European orientation.
