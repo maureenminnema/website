@@ -9,18 +9,28 @@ description: About Maureen Minnema, cognitive neuroscience and interdisciplinary
 portrait: images/portrait.jpg
 
 facts:
+  - label: Pronouns
+    value: she/her
   - label: Based in
     value: Nijmegen, the Netherlands
   - label: Current role
-    value: Research Assistant
+    value: Research Assistant at Sleep & Memory Lab (supervision: Dr. Martin Dresler)
   - label: Affiliation
-    value: Sleep & Memory lab (Dr. Martin Dresler), Donders Institute for Brain, Cognition and Behaviour
-  - label: Interests
-    value: Cognitive neuroscience, philosophy, AI, neuropsychology
+    value: Donders Centre for Cognitive Neuroimaging & Medical Neuroscience Faculty of Radboud University Medical Centre
   - label: Languages
-    value: Fluent in English, Dutch, German
-  - label: Pronouns
-    value: she/her
+    value: English (C2), Dutch (native), German (B2+), Frisian (native)
+  - label: Interests
+    value: Neural mechanisms of memory; Neuroimaging techniques; Sleep & dreams; Ethics of neurotechnology; Philosophy of consciousness; Science communication
+  - label: Soft skills
+    value: Project and study management; Organizational leadership; Interdisciplinary teamwork; Intercultural communication; Public speaking and outreach; Event planning; Student supervision; Teaching; Social media content creation & visual design
+  - label: Technical skills
+    value: |
+      **Data acquisition:** MEG; full-scalp EEG; wearable EEG; ECG; smartwatch-based monitoring; eye tracking and pupillometry; behavioral data collection
+
+      **Research software and programming:**
+    - Data analysis: Python (including MNE-Python); SPSS; and basic experience with Matlab, R Studio and JASP
+    - Experimental design: Basic experience with PsychoPy and Unity
+    - Digital and creative tools: MS Office; Canva; Video-editing software; Markdown; basic experience with HTML and Adobe Photoshop
 
 # A CV to download: put the PDF in static/files/ and name it here.
 # cv: files/cv-maureen-minnema.pdf
