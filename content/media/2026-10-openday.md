@@ -1,5 +1,5 @@
 ---
-title: '[_EVENT_] Open Day of the Radboud Univeristy Medical Center'
+title: '[*EVENT*] Open Day of the Radboud Univeristy Medical Center'
 date: 2026-10-04
 subtitle: RadboudUMC, Nijmegen
 ---
