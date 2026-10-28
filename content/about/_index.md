@@ -15,7 +15,7 @@ facts:
     value: Nijmegen, the Netherlands
 
   - label: Current role
-    value: "Research Assistant at Sleep & Memory Lab (supervision: Dr. Martin Dresler)"
+    value: "Research Assistant"
 
   - label: Affiliation
     value: Donders Centre for Cognitive Neuroimaging & Medical Neuroscience Faculty of Radboud University Medical Centre
