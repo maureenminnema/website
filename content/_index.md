@@ -25,12 +25,12 @@ buttons:
 
 focusTitle: Focus
 focus:
-  - title: Sleep & memory
-    text: Research assistant in the Donders Sleep & Memory Lab in Nijmegen.
-  - title: A broader view
-    text: Philosophy, AI and neuropsychology shape how I look at questions about cognition and the brain.
-  - title: Science communication
-    text: Bringing research beyond the lab, from public speaking, interviews to social media outreach.
+- title: Sleep & dreaming
+  text: Researching sleep and (lucid) dreaming, with broader interests in memory and consciousness.
+- title: Neuroethics
+  text: Exploring ethical questions surrounding emerging neurotechnologies, particularly non-invasive wearables in research and consumer markets.
+- title: Science communication
+  text: Bringing research beyond the lab through public speaking, interviews, and outreach.
     
 # "Latest" shows the newest entries from these folders.
 latestTitle: Latest
@@ -40,7 +40,7 @@ latestCount: 3
 # Links in the footer of every page and under "Reach me" on the About page.
 links:
   - label: Email
-    url: sayhi@m-minnema.nl
+    url: "mailto:sayhi@m-minnema.nl"
   - label: LinkedIn
     url: https://www.linkedin.com/in/maureen-minnema/
   - label: GitHub
