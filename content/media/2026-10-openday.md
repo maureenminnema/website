@@ -1,7 +1,7 @@
 ---
-title: '[EVENT] "Open Day of the Radboud Univeristy Medcial Center'
+title: '[_EVENT_] Open Day of the Radboud Univeristy Medical Center'
 date: 2026-10-04
 subtitle: RadboudUMC, Nijmegen
 ---
 
-We presented our work on wearables to an ethousiastic audience of young and old visitors. Showing live EEG-data of the visitor on the screen. A huge succes!
+We presented our work on wearables to an enthusiastic audience of all ages. Showing live EEG-data, explaining our studies and many interesting conversations. It was a huge success!
