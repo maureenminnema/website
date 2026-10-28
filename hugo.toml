@@ -17,7 +17,7 @@ disableKinds = ['taxonomy', 'term', 'rss']
 # Raw HTML in Markdown is dropped, so content can never add scripts. That is what lets the
 # Content-Security-Policy forbid scripts entirely (see Caddyfile and _partials/head.html).
 [markup.goldmark.renderer]
-  unsafe = false
+  unsafe = true
 
 [markup.goldmark.parser.attribute]
   block = true
