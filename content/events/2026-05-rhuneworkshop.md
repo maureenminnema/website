@@ -1,5 +1,5 @@
 ---
-title: '[presentation] The Organization Behind At-Home Sleep Studies'
+title: '[presentation] The Ethics of Using Wearables in Sleep Research'
 date: 2026-05-13
 subtitle: Research Hub Neuroethics · Bonn, Germany
 ---
