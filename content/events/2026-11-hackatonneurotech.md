@@ -1,5 +1,5 @@
 ---
-title: '[practical] The Organization Behind At-Home Sleep Studies'
+title: '[practical] Wearable EEGs in Sleep Research'
 date: 2026-10-07
 subtitle: Donders Institute · NeurotechEU
 ---
