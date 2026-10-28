@@ -310,5 +310,57 @@ p { margin: 0 0 1em; }
   .row-date { margin: 0; }
   .facts > div { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
   .footer-meta { margin-left: 0; width: 100%; }
+
+
+/* Interactive soft skills */
+.soft-skills {
+  margin: 2rem 0;
+}
+
+.soft-skills .skills-intro {
+  color: var(--muted, #666);
+  margin-bottom: 1rem;
+}
+
+.soft-skills .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 1.5rem;
+}
+
+.soft-skills .skill {
+  border-bottom: 1px solid var(--border, #ddd);
+  padding: 1rem 0;
+}
+
+.soft-skills .skill summary {
+  cursor: pointer;
+  font-weight: 500;
+  list-style-position: inside;
+}
+
+.soft-skills .skill p {
+  margin: 0.75rem 0 0;
+  color: var(--muted, #666);
+  font-size: 0.95rem;
+}
+
+@media (hover: hover) and (min-width: 601px) {
+  .soft-skills .skill:not([open]):hover p {
+    /* Details remain accessible; clicking opens the text. */
+  }
+
+  .soft-skills .skill:hover summary {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .soft-skills .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
   .entry-title { font-size: 1.4rem; }
 }
