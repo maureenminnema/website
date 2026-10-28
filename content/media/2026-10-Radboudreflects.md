@@ -2,7 +2,7 @@
 title: '[public speaking] "Lucid Dreaming: Being Aware in Your Dreams"'
 date: 2026-10-09
 subtitle: Radboud Reflects · Schemerlicht festival
-link: https://www.ru.nl/diensten/sport-cultuur-en-ontspanning/radboud-reflects/nieuws/lucid-dreaming-being-aware-in-your-dreams-radboud-reflects-schemerlicht-met-droomonderzoeker-maureen-minnema-en-kunstenaars-van-fuse
+link: https://www.ru.nl/en/alumni/services/recharge/overview/do-you-still-remember-what-you-dreamed-about-last-night
 linkLabel: Announcement of the event by Radboud Reflects
 ---
 
