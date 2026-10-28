@@ -1,6 +1,6 @@
 ---
 title: '[practical] The Organization Behind At-Home Sleep Studies'
-date: 2026-11-07
+date: 2026-10-07
 subtitle: Donders Institute · NeurotechEU
 ---
 
