@@ -1,5 +1,5 @@
 ---
-title: '[_EVENT_] World Alzheimers Day'
+title: '[event] World Alzheimers Day'
 date: 2026-09-19
 subtitle: Stevenskerk, Nijmegen
 link: null
