@@ -26,7 +26,7 @@
     <h2 class="section-label">{{ .Params.contactTitle | default "Reach me" }}</h2>
     <p class="actions">
       {{- range $links }}
-      <a class="button button-ghost" href="{{ partial "url.html" .url }}" rel="me">{{ .label }}</a>
+      <a class="button button-ghost" href="{{ .url }}" rel="me">{{ .label }}</a>
       {{- end }}
       {{- with .Params.cv }}
       <a class="button" href="{{ partial "url.html" . }}">Download CV</a>
