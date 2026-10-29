@@ -12,7 +12,7 @@ disableKinds = ['taxonomy', 'term', 'rss']
 [params]
   # While the site is a preview, ask search engines not to index it.
   # Set to false once it is Maureen's real home page.
-  noindex = true
+  noindex = false
 
 # Raw HTML in Markdown is dropped, so content can never add scripts. That is what lets the
 # Content-Security-Policy forbid scripts entirely (see Caddyfile and _partials/head.html).
