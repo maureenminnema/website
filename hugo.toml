@@ -2,7 +2,7 @@
 
 # Where the site is served. Docker and the GitHub Pages workflow override it with --baseURL,
 # so the same files work at the root of a domain and under a path like user.github.io/repo/.
-baseURL = 'https://maureen.cowolff-shenanigans.com/'
+baseURL = 'https://www.m-minnema.nl/'
 locale = 'en'
 title = 'Maureen Minnema'
 
