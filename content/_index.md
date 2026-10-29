@@ -20,10 +20,11 @@ buttons:
   - label: GitHub
     url: https://github.com/maureenminnema
     style: ghost
+  - label: Google Scholar
+    style: ghost
+    url: https://scholar.google.com/citations?user=0RI_FMwAAAAJ&hl=nl&oi=sra
   - label: Participate in our studies
     url: https://www.neuro.diy
-  - label: Google Scholar
-    url: https://scholar.google.com/citations?user=0RI_FMwAAAAJ&hl=nl&oi=sra
 
 focusTitle: Focus
 focus:
