@@ -45,9 +45,8 @@ links:
     url: https://www.linkedin.com/in/maureen-minnema/
   - label: GitHub
     url: https://github.com/maureenminnema
-  #   url: https://orcid.org/0000-0000-0000-0000
-  # - label: Google Scholar
-  #   url: https://scholar.google.com/citations?user=XXXX
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=0RI_FMwAAAAJ&hl=nl&oi=sra
 ---
 
 I work at the intersection of cognitive neuroscience and interdisciplinary research, currently at the
