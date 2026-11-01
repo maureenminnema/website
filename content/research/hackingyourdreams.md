@@ -1,7 +1,7 @@
 ---
 title: '[publication] Imagine Hacking Your Own Dreams'
 subtitle: Cognitive Science Student Journal · University Osnabrück
-weight: 10
+weight: 40
 # image: images/lab.jpg        # optional, from assets/images/ or next to this file
 # imageAlt: The sleep lab
 ---
