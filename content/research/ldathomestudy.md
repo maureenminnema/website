@@ -1,5 +1,5 @@
 ---
-title: [current study] Automated Lucid Dream Induction at Home
+title: '[current study] Automated Lucid Dream Induction at Home'
 subtitle: Sleep & Memory Lab · Donders Institute, Nijmegen
 weight: 10
 # image: images/lab.jpg        # optional, from assets/images/ or next to this file
