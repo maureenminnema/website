@@ -1,7 +1,7 @@
 ---
 title: '[in progress] International Study on Lucid Dreaming Expertise'
 subtitle: Sleep & Memory Lab · Donders Institute, Nijmegen
-weight: 10
+weight: 20
 # image: images/lab.jpg        # optional, from assets/images/ or next to this file
 # imageAlt: The sleep lab
 ---
