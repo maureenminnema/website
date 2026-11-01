@@ -1,7 +1,7 @@
 ---
 title: '[in progress] Methodological Best Practices for At-Home Sleep Research (with Wearable EEG)'
 subtitle: Sleep & Memory Lab · Donders Institute, Nijmegen
-weight: 30
+weight: 20
 # image: images/lab.jpg        # optional, from assets/images/ or next to this file
 # imageAlt: The sleep lab
 ---
