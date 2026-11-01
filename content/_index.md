@@ -52,5 +52,5 @@ links:
     url: https://scholar.google.com/citations?user=0RI_FMwAAAAJ&hl=nl&oi=sra
 ---
 
-I work at the intersection of cognitive neuroscience and interdisciplinary research, currently at the
+I work on interdisciplinary and cognitive neuroscience research, with an interest in sleep, dreams and memory processes. I am currently at the
 Donders Institute for Brain, Cognition and Behaviour in Nijmegen.
